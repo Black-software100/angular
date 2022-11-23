@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-between"><h5>Lista de niños</h5><span><a routerLink="/Grandparents_Agregar" class="btn btn-primary">+ </a></span></div> 
+  <div class="card-body">
+      <table class="table table-success table-striped">
+          <thead>
+            <tr>
+              <th scope="col">N° Documento</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Fecha de nacimiento</th>
+              <th scope="col">ciudad</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let grandparent of Grandparent; let iControl=index">
+              <th scope="row">{{grandparent.id}}</th>
+              <td>{{grandparent.first_name}}</td>
+              <td>{{grandparent.last_name}}</td>
+              <td>{{grandparent.fn}}</td>
+              <td>{{grandparent.city}}</td>
+              <td> <a class="btn btn-info" routerLink="/Grandparents_Edit/{{grandparent.id}}">Editar </a>| 
+                <a class="btn btn-danger" (click)="BorraRegistro(grandparent.id,iControl)">Eliminar</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+</div>

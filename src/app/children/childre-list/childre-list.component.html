@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-between"><h5>Lista de niños</h5><span><a routerLink="/Children_Agregar" class="btn btn-primary">+ </a></span></div> 
+  <div class="card-body">
+      <table class="table table-success table-striped">
+          <thead>
+            <tr>
+              <th scope="col">N° Documento</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Fecha de nacimiento</th>
+              <th scope="col">ciudad</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let childs of Childs; let iControl=index">
+              <th scope="row">{{childs.id}}</th>
+              <td>{{childs.first_name}}</td>
+              <td>{{childs.last_name}}</td>
+              <td>{{childs.fn}}</td>
+              <td>{{childs.city}}</td>
+              <td> <a class="btn btn-info" routerLink="/Children_Edit/{{childs.id}}">Editar </a>| 
+                <a class="btn btn-danger" (click)="BorraRegistro(childs.id,iControl)">Eliminar</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+</div>

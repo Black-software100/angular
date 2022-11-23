@@ -1,0 +1,25 @@
+<div class="card">
+    <h5 class="card-header">Registra donacion money</h5>
+    <div class="card-body">
+        <form [formGroup]="FormularioMoney" (ngSubmit)="enviarDatos()">
+            <div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                    <input type="tetx" class="form-control" id="" formControlName="name" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Money</label>
+                    <input type="number" class="form-control" id="" formControlName="money" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Fecha</label>
+                    <input type="date" class="form-control" id="" formControlName="fn" placeholder="">
+                </div>
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <button type="submit" class="btn btn-success">Guardar</button>
+                <button type="button" class="btn btn-warning">Eliminar</button>
+              </div>
+        </form>
+    </div>
+</div>

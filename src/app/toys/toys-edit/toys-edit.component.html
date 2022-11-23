@@ -1,0 +1,32 @@
+<div class="card">
+    <h5 class="card-header">Registra donacion de juguetes</h5>
+    <div class="card-body">
+        <form [formGroup]="FormularioToys" (ngSubmit)="enviarDatos()">
+            <div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nombre del donador</label>
+                    <input type="text" class="form-control" id="" formControlName="name" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Juguete</label>
+                    <input type="text" class="form-control" id="" formControlName="toys" placeholder="">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Genero</label>
+                    <select formControlName="gender" class="form-select">
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Fecha de donado</label>
+                    <input type="date" class="form-control" id="" formControlName="fn" placeholder="">
+                </div>
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <button type="submit" class="btn btn-success">Guardar</button>
+                <button type="button" class="btn btn-warning">Eliminar</button>
+              </div>
+        </form>
+    </div>
+</div>
