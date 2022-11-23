@@ -21,7 +21,7 @@ import { ToysFormComponent } from './toys/toys-form/toys-form.component';
 import { InformacionComponent } from './informacion/informacion.component';
 
 const routes: Routes = [
-  {path:'Children',component:InformacionComponent },
+  {path:'Children',component:ChildreListComponent },
   //
   {path:'Children',component:ChildreListComponent},
   {path:'Children_Agregar',component:ChildreFormComponent},
